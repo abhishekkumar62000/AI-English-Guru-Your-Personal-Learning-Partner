@@ -1,3 +1,4 @@
+# Core dependencies
 streamlit
 google-generativeai
 python-dotenv
@@ -6,7 +7,7 @@ pyttsx3
 pyaudio
 
 # Fix Torch version
-torch==2.2.0  # Latest version compatible with Streamlit Cloud
+torch==2.2.0  # Latest compatible version
 transformers==4.35.2
 
 # NLP & AI processing

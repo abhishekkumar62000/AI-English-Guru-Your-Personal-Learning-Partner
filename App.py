@@ -2,7 +2,6 @@ import spacy
 import subprocess
 import asyncio  # Import asyncio
 
-# Ensure Spacy's language model is installed
 try:
     spacy.load("en_core_web_sm")
 except OSError:

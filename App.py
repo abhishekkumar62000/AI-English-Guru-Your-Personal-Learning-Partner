@@ -1,16 +1,23 @@
-import spacy
 import subprocess
+import spacy
+import asyncio
 
-# Ensure Spacy's language model is installed
+# Ensure Spacy model is installed
 try:
     spacy.load("en_core_web_sm")
 except OSError:
     subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
+    spacy.load("en_core_web_sm")  # Load after download
+
+# Fix event loop error
+try:
+    asyncio.get_running_loop()
+except RuntimeError:
+    asyncio.run(asyncio.sleep(0))  # Fix event loop error
 
 from gramformer import Gramformer
 
 gf = Gramformer(models=1, use_gpu=False)  # Now it should work
-
 
 import streamlit as st
 import google.generativeai as genai
@@ -74,7 +81,6 @@ st.set_page_config(page_title="AI English Teacher", page_icon="🗣️", layout=
 
 st.title("🎙️AI English Guru–Your Personal Learning Partner🤖")
 st.write("Improve your English step by step with interactive lessons!")
-
 
 AI_path = "AI.png"  # Ensure this file is in the same directory as your script
 try:

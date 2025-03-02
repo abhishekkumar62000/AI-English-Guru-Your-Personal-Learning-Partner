@@ -1,7 +1,3 @@
-# Upgrade pip correctly
-pip install --upgrade pip
-
-# Core dependencies
 streamlit
 google-generativeai
 python-dotenv
@@ -9,8 +5,8 @@ speechrecognition
 pyttsx3
 pyaudio
 
-# Fix Torch and Transformers version
-torch==2.2.0  # Latest compatible with Streamlit Cloud
+# Fix Torch version
+torch==2.2.0  # Latest version compatible with Streamlit Cloud
 transformers==4.35.2
 
 # NLP & AI processing

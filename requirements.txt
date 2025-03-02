@@ -6,8 +6,8 @@ speechrecognition
 pyttsx3
 pyaudio
 
-# Fixing torch & transformers
-torch==2.0.1
+# Fix Torch version (latest supported on Streamlit Cloud)
+torch==2.2.0
 transformers==4.35.2
 
 # NLP & AI processing
@@ -16,12 +16,12 @@ openai
 pydub
 gtts
 
-# Fixing Spacy & Thinc versions
+# Fix Spacy & Thinc version
 spacy==3.5.4
 thinc==8.1.10
 
-# Spacy model (fix missing en_core_web_sm)
+# Ensure Spacy model is installed
 en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.5.0/en_core_web_sm-3.5.0.tar.gz
 
-# Fixing Gramformer installation
+# Install Gramformer from GitHub (PyPI version is outdated)
 git+https://github.com/PrithivirajDamodaran/Gramformer.git

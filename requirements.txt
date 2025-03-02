@@ -4,10 +4,12 @@ python-dotenv
 speechrecognition
 pyttsx3
 pyaudio
-gramformer
 torch
 transformers
 textblob
 openai
 pydub
 gtts
+
+# Install Gramformer from GitHub (not available on PyPI)
+git+https://github.com/PrithivirajDamodaran/Gramformer.git

@@ -1,10 +1,12 @@
+--upgrade pip  # Force pip upgrade to avoid dependency issues
+
 streamlit
 google-generativeai
 python-dotenv
 speechrecognition
 pyttsx3
 pyaudio
-torch==2.0.1
+torch==2.2.0  # Fix PyTorch version
 transformers==4.35.2
 textblob
 openai

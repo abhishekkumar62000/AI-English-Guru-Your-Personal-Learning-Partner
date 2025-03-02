@@ -1,3 +1,17 @@
+import spacy
+import subprocess
+
+# Ensure Spacy's language model is installed
+try:
+    spacy.load("en_core_web_sm")
+except OSError:
+    subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
+
+from gramformer import Gramformer
+
+gf = Gramformer(models=1, use_gpu=False)  # Now it should work
+
+
 import streamlit as st
 import google.generativeai as genai
 import os

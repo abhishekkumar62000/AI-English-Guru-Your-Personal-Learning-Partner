@@ -1,18 +1,30 @@
---upgrade pip  # Force pip upgrade to avoid dependency issues
+# Upgrade pip correctly
+pip install --upgrade pip
 
+# Core dependencies
 streamlit
 google-generativeai
 python-dotenv
 speechrecognition
 pyttsx3
 pyaudio
-torch==2.2.0  # Fix PyTorch version
+
+# Fix Torch and Transformers version
+torch==2.2.0  # Latest compatible with Streamlit Cloud
 transformers==4.35.2
+
+# NLP & AI processing
 textblob
 openai
 pydub
 gtts
+
+# Fix Spacy & Thinc version
 spacy==3.5.4
 thinc==8.1.10
+
+# Ensure Spacy model is installed
 en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.5.0/en_core_web_sm-3.5.0.tar.gz
+
+# Install Gramformer from GitHub (PyPI version is outdated)
 git+https://github.com/PrithivirajDamodaran/Gramformer.git

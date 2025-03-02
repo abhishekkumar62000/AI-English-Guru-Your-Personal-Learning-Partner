@@ -1,13 +1,12 @@
-import subprocess
 import spacy
-import asyncio
+import subprocess
 
-# Ensure Spacy model is installed
+# Ensure Spacy's language model is installed
 try:
     spacy.load("en_core_web_sm")
 except OSError:
     subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
-    spacy.load("en_core_web_sm")  # Load after download
+    spacy.load("en_core_web_sm")
 
 # Fix event loop error
 try:
